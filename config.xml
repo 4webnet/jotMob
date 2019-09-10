@@ -10,8 +10,6 @@
 	<preference name="orientation" value="portrait" />
 	<preference name="permissions" value="none" />
 	<preference name="android-minSdkVersion" value="16" />
-	<preference name="android-targetSdkVersion " value="20" />
-	<platform name="android" />
 	<icon src="img/logo.png" />
 	<splash src="img/logo.png" />
     <content src="index.html" />

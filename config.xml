@@ -11,8 +11,8 @@
 	<preference name="permissions" value="none" />
 	<preference name="android-minSdkVersion" value="16" />
 	<platform name="android" />
-	<icon src="logo.png" />
-	<splash src="logo.png" />
+	<icon src="img/logo.png" />
+	<splash src="img/logo.png" />
     <content src="index.html" />
     <access origin="*" />
 </widget>

@@ -42,8 +42,6 @@ $(document).ready(function(){
 
 	var url="https://app.scoutjotichallenge.com/app/listaquiz.php";
 	
-	alert(url);
-    
 	$.ajax({
 		type: "POST",
 		url: url,
@@ -55,7 +53,18 @@ $(document).ready(function(){
 			$("#listaquiz").html('Carregando dados...');
 		},
 		success: function(data){
-			alert(data);
+			$("#listaquiz").html('');
+			for(x = 0; x < data.length; x++){
+				var vid=data[x].quiz_id;
+				var vnome=data[x].quiz_nome;
+				var r=$('<input/>').attr({
+						type: "button",
+						class: "ui-btn ui-icon-power ui-btn-icon-top",
+						id: vid,
+						value: vnome
+					});
+					$("#listaquiz").append(r);				
+			}
 		},error: function(xhr,e,t){
                 console.log("erro "+xhr.responseText);                
         }
